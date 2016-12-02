@@ -29,6 +29,9 @@ class SecurityPlugin extends Plugin
 		$privateResources = [
 			"connexion" => ["disconnect", "success"],
 			"dashboard" => ["index", "getData"],
+			"technicien" => ["index", "getData"],
+			"intervention" => ["index", "getData"],
+			"logistique" => ["index", "getData"],
 		];
 		/* ajout des resources privées dans l'acl */
 		foreach ($privateResources as $resourceName => $actions)
@@ -38,7 +41,8 @@ class SecurityPlugin extends Plugin
 		/* liste des resources publiques "controller" => ["action", "action"]*/
 		$publicResources = [
 			"index" => ["index"],
-			"connexion" => ["connect", "start", "mdpOublie", "fail"],
+			"connexion" => ["connect", "start", "fail"],
+			"forgetPassword" => ["index", "selectPassword", "savePassword"],
 		];
 		/* ajout des resources publiques dans l'acl */
 		foreach ($publicResources as $resourceName => $actions)
@@ -76,6 +80,10 @@ class SecurityPlugin extends Plugin
 		$action = $dispatcher->getActionName();
 		$acl = $this->getAcl();
 		$allowed = $acl->isAllowed($role, $controller, $action);
+	/*
+	**	Si on n'a pas le droit d'accéder au controller ou à son action
+	**	on le redirige vers la page de connection
+	*/
 		if (!$allowed)
 		{
 			$this->response->redirect("");

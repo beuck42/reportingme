@@ -6,9 +6,10 @@ use Phalcon\Mvc\Dispatcher;
 
 class NotFoundPlugin extends Plugin
 {
-	public function beforeExecuteRoute(Event $event, Dispatcher $dispatcher)
+	public function beforeException(Event $event, Dispatcher $dispatcher)
 	{
-		$dispatcher->forward(array("controller" => "index", "action" => "index"));
+	/* Si une exception survient on redirige vers la page de connection */
+		$this->response->redirect("");
 		return (false);
 	}
 }

@@ -38,7 +38,7 @@ try
 			]
 		));
 	});
-	/*	On set le path des views */
+	/* On set le path des views */
 	$di->set("view", function () use ($config)
 	{
 		$view = new View();

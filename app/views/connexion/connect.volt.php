@@ -43,8 +43,8 @@
 
 		<!-- BEGIN LOGO -->
 		<div class="logo">
-			{{ linkTo("index/index", "<img src='/securinfor/public/img/logo_trans.png' alt='' />") }}
-			{{ linkTo("index/index", "<img src='/securinfor/public/img/logo_securinfor_small.png' alt='' />") }}
+			<?= $this->tag->linkto('index/index', '<img src=\'/securinfor/public/img/logo_trans.png\' alt=\'\' />') ?>
+			<?= $this->tag->linkto('index/index', '<img src=\'/securinfor/public/img/logo_securinfor_small.png\' alt=\'\' />') ?>
 			<!-- <a href="index.html"> -->
 				<!-- <img src="/securinfor/public/img/logo_trans.png" alt="" /> </a> -->
 		</div>
@@ -53,7 +53,7 @@
 
 		<div class="content">
 			<!-- BEGIN LOGIN FORM -->
-			{{ form("connexion/start", "method": "post", "class": "login-form") }}
+			<?= $this->tag->form(['connexion/start', 'method' => 'post', 'class' => 'login-form']) ?>
 			<!-- <form class="login-form" action="connexion/connect" method="post"> -->
 				<h3 class="form-title font-green">Connexion</h3>
 				<div class="alert alert-danger display-hide">
@@ -100,10 +100,10 @@
 					</p>
 				</div>-->
 			<!-- </form> -->
-			{{ end_form() }}
+			<?= $this->tag->endForm() ?>
 			<!-- END LOGIN FORM -->
 			<!-- BEGIN FORGOT PASSWORD FORM -->
-			{{ form("forgetPassword", "method": "post", "class": "forget-form") }}
+			<?= $this->tag->form(['forgetPassword', 'method' => 'post', 'class' => 'forget-form']) ?>
 			<form class="forget-form" action="index.html" method="post">
 				<h3 class="font-green">Mot de Passe Oublié?</h3>
 				<p> Entrez votre adresse mail ou pseudo ci-dessous pour changer de mot de passe. </p>
@@ -113,7 +113,7 @@
 					<button type="button" id="back-btn" class="btn green btn-outline">Retour</button>
 					<button type="submit" class="btn btn-success uppercase pull-right">Envoyer</button>
 				</div>
-			{{ end_form() }}
+			<?= $this->tag->endForm() ?>
 			<!-- END FORGOT PASSWORD FORM -->
 			<!-- BEGIN REGISTRATION FORM -->
 			<!-- <form class="register-form" action="index.html" method="post">

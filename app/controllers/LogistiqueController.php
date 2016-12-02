@@ -2,7 +2,7 @@
 
 use Phalcon\Mvc\Controller;
 
-class DashboardController extends Controller
+class LogistiqueController extends Controller
 {
 	public function indexAction()
 	{
@@ -17,7 +17,7 @@ class DashboardController extends Controller
 			$connexion = $this->di->get("db");
 			// A FAIRE !!!!! Check la valeure input de start et end !!!!!
 			$optitime = new Optitime;
-			$data = $optitime->initOptitime($start, $end, $connexion);
+			$data = $optitime->initLogistique($start, $end, $connexion);
 			$this->response->setContent(json_encode($data, JSON_UNESCAPED_UNICODE));
 			return ($this->response);
 		}
