@@ -1,27 +1,11 @@
-function formatData(data, keys)
+function format(data)
 {
-	var i = -1;
-	dataFormated = [];
-	keys = [
-		"NOM_TICKET",
-		"DATE_CREATION",
-		"VILLE",
-		"TECHNICIEN",
-		"BD_DESCRIPTION",
-	];
-
-	while (data[++i])
-	{
-		dataFormated[i] = {};
-		j = -1;
-		while (keys[++j])
-		{
-			if (data[i][keys[j]])
-				dataFormated[i][keys[j]] = data[i][keys[j]];
-			else
-				dataFormated[i][keys[j]] = "";
-		}
-	}
+	return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+		'<tr>' +
+			'<td>Description complète:</td>' +
+			'<td>' + data.BD_DESCRIPTION + '</td>' +
+		'</tr>' +
+	'</table>';
 }
 
 function initDataTable(start, end, label)
@@ -42,9 +26,26 @@ function initDataTable(start, end, label)
 				"BD_DESCRIPTION",
 			];
 			formatDataTable(json, keys);
-			dataTable.fnClearTable();
-			if (dataFormated.length)
-				dataTable.fnAddData(dataFormated);
+			dataTable.clear();
+			dataTable.rows.add(dataFormated).draw();
+			dataTable.on('click', 'td.details-control', function ()
+			{
+				var tr = $(this).closest('tr');
+				var row = dataTable.row(tr);
+
+				if (row.child.isShown())
+				{
+					// This row is already open - close it
+					row.child.hide();
+					tr.removeClass('shown');
+				}
+				else
+				{
+					// Open this row
+					row.child(format(row.data())).show();
+					tr.addClass('shown');
+				}
+			});
 		},
 		error: function(jqXHR, textStatus, errorThrown)
 		{
