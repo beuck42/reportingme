@@ -1,4 +1,4 @@
-function formatData(data)
+function formatData(data, keys)
 {
 	var i = -1;
 	dataFormated = [];
@@ -12,14 +12,14 @@ function formatData(data)
 
 	while (data[++i])
 	{
-		dataFormated[i] = [];
+		dataFormated[i] = {};
 		j = -1;
 		while (keys[++j])
 		{
 			if (data[i][keys[j]])
-				dataFormated[i][j] = data[i][keys[j]];
+				dataFormated[i][keys[j]] = data[i][keys[j]];
 			else
-				dataFormated[i][j] = "";
+				dataFormated[i][keys[j]] = "";
 		}
 	}
 }
@@ -34,7 +34,14 @@ function initDataTable(start, end, label)
 		success: function(json)
 		{
 			/* si la requete réussi on initialise toutes les données */
-			formatData(json);
+			keys = [
+				"NOM_TICKET",
+				"DATE_CREATION",
+				"VILLE",
+				"TECHNICIEN",
+				"BD_DESCRIPTION",
+			];
+			formatDataTable(json, keys);
 			dataTable.fnClearTable();
 			if (dataFormated.length)
 				dataTable.fnAddData(dataFormated);

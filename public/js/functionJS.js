@@ -1,3 +1,22 @@
+function formatDataTable(data, keys)
+{
+	var i = -1;
+	dataFormated = [];
+
+	while (data[++i])
+	{
+		dataFormated[i] = {};
+		j = -1;
+		while (keys[++j])
+		{
+			if (data[i][keys[j]])
+				dataFormated[i][keys[j]] = data[i][keys[j]];
+			else
+				dataFormated[i][keys[j]] = "";
+		}
+	}
+}
+
 function diffDate(start, end)
 {
 	var start = moment(start, "YYYYMMDDHH").format("YYYYMMDD");

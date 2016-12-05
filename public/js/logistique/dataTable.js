@@ -2,11 +2,10 @@
 {
 	dataTable = $('#logistique').dataTable({
 		"columns": [
-			{"title" : "Nom du ticket"},
-			{"title" : "Date d'intervention"},
-			{"title" : "Ville"},
-			{"title" : "Technicien"},
-			{"title" : "Description"},
+			{"title": "Nom du ticket", "data": "NOM_TICKET"},
+			{"title": "Date d'intervention", "data": "DATE_CREATION"},
+			{"title": "Ville", "data": "VILLE"},
+			{"title": "Technicien", "data": "TECHNICIEN"},
 		],
 	});
 	initDRP("logistique");
