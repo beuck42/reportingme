@@ -45,7 +45,7 @@ function initDataTable(start, end, label)
 			dataTable.on('click', 'td.details-control', function ()
 			{
 				var tr = $(this).closest('tr');
-				var row = dataTable.row( tr );
+				var row = dataTable.row(tr);
 
 				if (row.child.isShown())
 				{
