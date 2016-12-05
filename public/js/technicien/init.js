@@ -3,9 +3,6 @@ function updateGraph(data, filtre, display)
 	if (typeof(AmCharts) === 'undefined' || $('.select').size() === 0)
 		return;
 	graph = initAmChartGraph("graph");
-	console.log(graph);
-	console.log(data);
-	console.log(filtre);
 	if (!data || !data[0])
 		return ;
 	graph.dataProvider = data;
