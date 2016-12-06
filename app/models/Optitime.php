@@ -11,7 +11,7 @@ class Optitime extends Model
 						LONGITUDE, LATITUDE, NOM_CLIENT
 						-- , kizeo.FIN
 						FROM optitime
-						-- LEFT JOIN kizeo ON optitime2.NOM_TICKET = kizeo.NUM_TICKET
+						-- LEFT JOIN kizeo ON optitime.NOM_TICKET = kizeo.NUM_TICKET
 						WHERE DATE_CREATION >= :start
 						AND DATE_CREATION <= :end
 						AND BD_RDV = 'NON'
