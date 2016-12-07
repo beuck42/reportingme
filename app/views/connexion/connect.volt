@@ -433,7 +433,6 @@
 		<!-- BEGIN THEME LAYOUT SCRIPTS -->
 		<!-- END THEME LAYOUT SCRIPTS -->
 		<script src="/securinfor/public/js/functionJS.js" type="text/javascript"></script>
-		<script src="/securinfor/public/js/sha512.js" type="text/javascript"></script>
 	</body>
 
 </html>
