@@ -6,7 +6,7 @@
 <meta content="Securinfor statistics, charts, recent events and reports" name="description" />
 <meta content="Mikado Labs" name="author" />
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
 <link href="/securinfor/public/assets/global/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
 <link href="/securinfor/public/assets/global/plugins/simple-line-icons/simple-line-icons.css" rel="stylesheet" type="text/css" />
 <link href="/securinfor/public/assets/global/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />

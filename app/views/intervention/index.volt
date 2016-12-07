@@ -4,8 +4,8 @@
 <html lang="en">
 	<head>
 		{% include "includes/head.volt" %}
-		<!-- <link href="/securinfor/public/assets/DataTables/datatables.min.css" rel="stylesheet" type="text/css" /> -->
-		<link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+		<link href="/securinfor/public/assets/DataTables/datatables.min.css" rel="stylesheet" type="text/css" />
+		<!-- <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" /> -->
 		<link href="css/datatable.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed">
@@ -55,11 +55,11 @@
 		<!-- END CONTAINER -->
 		{% include "includes/scriptJS.volt" %}
 		<!-- BEGIN PAGE LEVEL SCRIPTS -->
-		<!-- <script src="/securinfor/public/assets/DataTables/datatables.min.js" type="text/javascript"></script> -->
 		<script src="/securinfor/public/js/functionJS.js" type="text/javascript"></script>
 		<script src="/securinfor/public/js/intervention/init.js" type="text/javascript"></script>
 		<script src="/securinfor/public/js/daterangepicker.js" type="text/javascript"></script>
-		<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
+		<!-- <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script> -->
+		<script src="/securinfor/public/assets/DataTables/datatables.min.js" type="text/javascript"></script>
 		<script src="/securinfor/public/js/intervention/dataTable.js" type="text/javascript"></script>
 		<!-- END PAGE LEVEL SCRIPTS -->
 	</body>
