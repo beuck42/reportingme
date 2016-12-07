@@ -13,7 +13,7 @@
 		<meta content="Mikado Labs Reporting Login Page" name="description" />
 		<meta content="Mikado Labs" name="author" />
 		<!-- BEGIN GLOBAL MANDATORY STYLES -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
 		<link href="/securinfor/public/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		<link href="/securinfor/public/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
 		<link href="/securinfor/public/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -53,10 +53,10 @@
 
 		<div class="content">
 			<!-- BEGIN LOGIN FORM -->
-			{{ form("class": "login-form", "onsubmit": "submitConn()") }}
+			{{ form("connexion/start", "method": "post", "class": "login-form") }}
 			<!-- <form class="login-form" action="connexion/connect" method="post"> -->
 				<h3 class="form-title font-green">Connexion</h3>
-				<div class="alert alert-danger display-hide" style="margin-top: 0px">
+				<div class="alert alert-danger display-hide">
 					<button class="close" data-close="alert"></button>
 					<span> Entrez un pseudo/mail et/ou un mot de passe valide. </span>
 				</div>
@@ -432,8 +432,6 @@
 		<!-- END PAGE LEVEL SCRIPTS -->
 		<!-- BEGIN THEME LAYOUT SCRIPTS -->
 		<!-- END THEME LAYOUT SCRIPTS -->
-		<script src="/securinfor/public/js/functionJS.js" type="text/javascript"></script>
-		<script src="/securinfor/public/js/sha512.js" type="text/javascript"></script>
 	</body>
 
 </html>

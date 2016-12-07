@@ -23,7 +23,7 @@ class ConnexionController extends Controller
 			$password = $this->request->getPost("password");
 			$user = Membres::findFirst([
 				"(email = :email: OR pseudo = :pseudo:) AND mdp = :password:",
-				"bind" => ["email" => $pseudoOrEmail, "pseudo" => $pseudoOrEmail, "password" => $password]
+				"bind" => ["email" => $pseudoOrEmail, "pseudo" => $pseudoOrEmail, "password" => hash("sha512", $password)]
 			]);
 			if ($user != false)
 			{
