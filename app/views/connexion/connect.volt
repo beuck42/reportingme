@@ -56,7 +56,7 @@
 			{{ form("connexion/start", "method": "post", "class": "login-form") }}
 			<!-- <form class="login-form" action="connexion/connect" method="post"> -->
 				<h3 class="form-title font-green">Connexion</h3>
-				<div class="alert alert-danger display-hide">
+				<div class="alert alert-danger display-hide" style="margin-top:0px">
 					<button class="close" data-close="alert"></button>
 					<span> Entrez un pseudo/mail et/ou un mot de passe valide. </span>
 				</div>
