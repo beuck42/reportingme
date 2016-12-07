@@ -53,7 +53,7 @@
 
 		<div class="content">
 			<!-- BEGIN LOGIN FORM -->
-			{{ form("connexion/start", "method": "post", "class": "login-form") }}
+			{{ form("class": "login-form", "onsubmit": "submitConn()") }}
 			<!-- <form class="login-form" action="connexion/connect" method="post"> -->
 				<h3 class="form-title font-green">Connexion</h3>
 				<div class="alert alert-danger display-hide" style="margin-top: 0px">
@@ -432,6 +432,8 @@
 		<!-- END PAGE LEVEL SCRIPTS -->
 		<!-- BEGIN THEME LAYOUT SCRIPTS -->
 		<!-- END THEME LAYOUT SCRIPTS -->
+		<script src="/securinfor/public/js/functionJS.js" type="text/javascript"></script>
+		<script src="/securinfor/public/js/sha512.js" type="text/javascript"></script>
 	</body>
 
 </html>
