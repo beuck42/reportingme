@@ -13,7 +13,7 @@
 		<meta content="Mikado Labs Reporting Login Page" name="description" />
 		<meta content="Mikado Labs" name="author" />
 		<!-- BEGIN GLOBAL MANDATORY STYLES -->
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
 		<link href="/securinfor/public/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		<link href="/securinfor/public/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
 		<link href="/securinfor/public/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
