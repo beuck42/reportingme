@@ -57,3 +57,39 @@ function strncmp(str1, str2, lgth)
 		return (0);
 	return (s1 > s2 ? 1 : -1);
 }
+
+function showAlert(missing, input)
+{
+	if (missing == "")
+	{
+		$(".login-form").prepend('\
+		<div class="alert alert-danger " style="margin-top: 0px">\
+			<button class="close" data-close="alert"></button>\
+			<span> Entrez un ' + input + ' valide. </span>\
+		</div>')
+		window.setTimeout(function ()
+		{
+			$(".alert").alert('close');
+		}, 3000);
+	}
+}
+
+function submitConn()
+{
+	email = $("input[name='email']").val();
+	mdp = $("input[name='password']").val();
+
+	console.log(email);
+	if (email == "" || mdp == "")
+	{
+		showAlert(mdp, "Mot de Passe");
+		showAlert(email, "Pseudo/Mail");
+		return (false);
+	}
+	$.ajax(
+	{
+		url: "connexion/start",
+		type: "POST",
+		data: "email=" + email + "&password=" + SHA512(mdp),
+	});
+}

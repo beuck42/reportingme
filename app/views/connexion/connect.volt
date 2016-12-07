@@ -53,13 +53,9 @@
 
 		<div class="content">
 			<!-- BEGIN LOGIN FORM -->
-			{{ form("connexion/start", "method": "post", "class": "login-form") }}
+			{{ form("class": "login-form", "onsubmit": "submitConn()") }}
 			<!-- <form class="login-form" action="connexion/connect" method="post"> -->
 				<h3 class="form-title font-green">Connexion</h3>
-				<div class="alert alert-danger display-hide">
-					<button class="close" data-close="alert"></button>
-					<span> Entrez un pseudo/mail et/ou un mot de passe valide. </span>
-				</div>
 				<div class="form-group">
 					<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
 					<label class="control-label visible-ie8 visible-ie9">Pseudo/Mail</label>
@@ -432,6 +428,8 @@
 		<!-- END PAGE LEVEL SCRIPTS -->
 		<!-- BEGIN THEME LAYOUT SCRIPTS -->
 		<!-- END THEME LAYOUT SCRIPTS -->
+		<script src="/securinfor/public/js/functionJS.js" type="text/javascript"></script>
+		<script src="/securinfor/public/js/sha512.js" type="text/javascript"></script>
 	</body>
 
 </html>
